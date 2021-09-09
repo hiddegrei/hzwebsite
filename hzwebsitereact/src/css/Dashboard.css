@@ -1,0 +1,86 @@
+.dash {
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dash__links {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  border: 1px solid black;
+}
+#courses {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  font-size: 10px;
+
+  width: 80%;
+}
+
+#courses td,
+#courses th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 20px;
+}
+
+#courses tr:nth-child(even) {
+  background-color: white;
+}
+
+#courses tr:hover {
+  background-color: #ddd;
+}
+
+#courses th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+#chart_div {
+  display: flex;
+  margin: auto auto;
+}
+.dash__tableBox {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  border: 1px solid red;
+}
+.dash__tableBox__data {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  align-items: center;
+  place-content: center;
+}
+.dash__tableBox__data__row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.dash__tableBox__data__color {
+  display: flex;
+  width: 13px;
+  height: 13px;
+  border: 1px solid black;
+}
+.dash__tableBox__data__name {
+  display: flex;
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 15px;
+}
+.dash__graph {
+  display: flex;
+  margin-top: 30px;
+  width: 100%;
+  border: 1px solid black;
+  place-content: center;
+}

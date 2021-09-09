@@ -1,0 +1,33 @@
+.blogpost {
+  display: flex;
+  width: 50%;
+  height: 400px;
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.blogpost__title {
+  display: flex;
+  border: 1px solid black;
+  width: 100%;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.blogpost__readmore {
+  display: flex;
+  margin-left: auto;
+  margin-top: auto;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  width: fit-content;
+  text-decoration: none;
+  border: 1px solid black;
+}
+.blogpost__readmore:hover {
+  color: blue;
+  cursor: pointer;
+}
