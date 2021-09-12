@@ -1,9 +1,8 @@
 .blog {
   display: flex;
   flex-direction: column;
-  margin-top: 150px;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }

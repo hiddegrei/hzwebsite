@@ -1,7 +1,8 @@
 .dash {
   display: flex;
+  flex: 0.9;
   flex-direction: column;
-  margin-top: 150px;
+  /* margin-top: 0px; */
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -49,6 +50,7 @@
 .dash__tableBox {
   display: flex;
   width: 80%;
+  margin: auto auto;
   justify-content: space-between;
   border: 1px solid red;
 }

@@ -11,8 +11,9 @@ function BlogPost({title,link}) {
         <div className="blogpost">
             <h3 className="blogpost__title">{title}</h3>
 
-
-            <a target="_blank" href={link} className="blogpost__readmore">read more</a>
+             {title=='HTML5 best practices; section/header/aside/article elements'?
+             <a target="_blank"  href={link} className="blogpost__readmore">read more</a>:
+            <a  href={link} className="blogpost__readmore">read more</a>}
             
         </div>
     )

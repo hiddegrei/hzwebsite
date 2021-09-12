@@ -12,8 +12,11 @@ function Blog() {
             <BlogPost title="programmering ervaring" link="/blogpost/progervaring"/>
 
             <BlogPost title="Studiekeuze" link="/blogpost/studiekeuze"/>
+
+            <BlogPost title="ICT lezing Damen Naval" link="/blogpost/damennaval"/>
         </div>
     )
 }
 
 export default Blog
+

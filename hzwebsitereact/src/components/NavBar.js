@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import "../css/NavBar.css";
+import {Link} from "react-router-dom";
 
 
 function NavBar({active}) {
@@ -14,9 +15,8 @@ function NavBar({active}) {
      useEffect(()=>{
         
 
-        if(getUrl.pathname==='/'){
-      setHome(true)
-   }else if(getUrl.pathname==='/profile'){setProfile(true)}
+        if(getUrl.pathname==='/'){setHome(true)}
+   else if(getUrl.pathname==='/profile'){setProfile(true)}
    else if(getUrl.pathname==='/faq'){setFaq(true)}
    else if(getUrl.pathname==='/dashboard'){setDashboard(true)}
    else if(getUrl.pathname==='/blog'){setBlog(true)}
@@ -27,14 +27,16 @@ function NavBar({active}) {
     return (
         <div className="navbar">
 
-             <nav class="nav">
-          
-          <img alt="" class="nav__button " href="https://learn.hz.nl" src="https://hz.nl/assets/svg/hz-logo.svg"></img>
-        <a class={home?`nav__button active`:"nav__button"} href="/">Home</a>
+             <nav className="nav">
+          <Link to={{ pathname: "https://hz.nl" }}  target="_blank">
+              
+          <img alt="" className="nav__button "  src="https://hz.nl/assets/svg/hz-logo.svg"></img>
+        </Link>
+        <a className={home?`nav__button active`:"nav__button"} href="/">Home</a>
         <a href="/profile" class={profile?`nav__button active`:"nav__button"}>Profile</a>
-        <a class={dashboard?`nav__button active`:"nav__button"} href="/dashboard">Dashboard</a>
-        <a class={faq?`nav__button active`:"nav__button"} href="/faq">FAQ</a>
-        <a class={blog?`nav__button active`:"nav__button"} href="/blog">Blog</a>
+        <a className={dashboard?`nav__button active`:"nav__button"} href="/dashboard">Dashboard</a>
+        <a className={faq?`nav__button active`:"nav__button"} href="/faq">FAQ</a>
+        <a className={blog?`nav__button active`:"nav__button"} href="/blog">Blog</a>
       </nav>
             
         </div>
