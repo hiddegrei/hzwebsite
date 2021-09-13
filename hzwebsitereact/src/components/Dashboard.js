@@ -3,6 +3,7 @@ import "../css/Dashboard.css";
 import Chart from "react-google-charts";
 import {db} from "../firebase";
 
+
 function Dashboard() {
     const [toets1,setToets1]=useState(0);
     const [toets2,setToets2]=useState(0)
@@ -20,7 +21,7 @@ function Dashboard() {
     const [toets14,setToets14]=useState(0)
     const [toets15,setToets15]=useState(0)
 
-    const [cijfers,setCijfers]=useState([])
+    const [ready,setReady]=useState(false)
 
     const [q1,setQ1]=useState(0)
     const [q2,setQ2]=useState(0)
@@ -38,81 +39,208 @@ function Dashboard() {
      
     
       db.collection('exams').get().then(data=>{
-        setCijfers(data.docs.map((doc)=>doc.data()))
+        
+        data.docs.map((doc)=>{
+         
+          
+          if(doc.data().naam==='toets1'){
+          setToets1(doc.data().cijfer)
+        }
+        if(doc.data().naam==='toets2'){
+          setToets2(doc.data().cijfer)
+        }
+        if(doc.data().naam==='toets3'){
+          setToets3(doc.data().cijfer)
+        }
+        if(doc.data().naam==='toets4'){
+          setToets4(doc.data().cijfer)
+        }
+        if(doc.data().naam==='toets5'){
+          setToets5(doc.data().cijfer)
+        }
+        if(doc.data().naam==='toets6'){
+          setToets6(doc.data().cijfer)
+        }
+        if(doc.data().naam==='toets7'){
+          setToets7(doc.data().cijfer)
+        }
+        if(doc.data().naam==='toets8'){
+          setToets8(doc.data().cijfer)
+        }
+        if(doc.data().naam==='toets9'){
+          setToets9(doc.data().cijfer)
+        }
+        if(doc.data().naam==='toets10'){
+          setToets10(doc.data().cijfer)
+        }
+        if(doc.data().naam==='toets11'){
+          setToets11(doc.data().cijfer)
+        }
+        if(doc.data().naam==='toets12'){
+          setToets12(doc.data().cijfer)
+        }
+        if(doc.data().naam==='toets13'){
+          setToets13(doc.data().cijfer)
+        }
+        if(doc.data().naam==='toets14'){
+          setToets14(doc.data().cijfer)
+        }
+        if(doc.data().naam==='toets15'){
+          setToets15(doc.data().cijfer)
+        }
+
+        })
+        setReady(true)
+
+        
+        
       })
      
 
 
-    },[tryAgain])
+    },[])
+     
+
+    
 
     useEffect(()=>{
-      if(cijfers.length<1){
-        setTryAgain(true)
-      }else{
+      if(ready){
        
-          setToets1(cijfers[0].cijfer)
-          setToets2(cijfers[1].cijfer)
-          setToets3(cijfers[2].cijfer)
-          setToets4(cijfers[3].cijfer)
-          setToets5(cijfers[4].cijfer)
-          setToets6(cijfers[5].cijfer)
-          setToets7(cijfers[6].cijfer)
-          setToets8(cijfers[7].cijfer)
-          setToets9(cijfers[8].cijfer)
-          setToets10(cijfers[9].cijfer)
-          setToets11(cijfers[10].cijfer)
-          setToets12(cijfers[11].cijfer)
-          setToets13(cijfers[12].cijfer)
-          setToets14(cijfers[13].cijfer)
-          setToets15(cijfers[14].cijfer)
-
-        
-        
-
-      }
-
-    },[cijfers])
-
-    
-    
-
-    
-    useEffect(()=>{
-      
-      
-        if(cijfers[0]?.cijfer!==toets1&&cijfers.length>0&&toets1!==undefined){
-          db.collection('exams').doc('toets1').set({
+      db.collection('exams').doc('toets1').set({
              naam:'toets1',
              cijfer:toets1})
-        }
-        if(cijfers[1]?.cijfer!==toets2&&cijfers.length>0&&toets2!==undefined){
-          db.collection('exams').doc('toets2').set({
+      }
+    },[toets1])
+
+    useEffect(()=>{
+      if(ready){
+       db.collection('exams').doc('toets2').set({
              naam:'toets2',
              cijfer:toets2})
-        }
-        if(cijfers[2]?.cijfer!==toets3&&cijfers.length>0&&toets3!==undefined){
-          db.collection('exams').doc('toets3').set({
+       }
+
+    },[toets2])
+
+    useEffect(()=>{
+      if(ready){
+       db.collection('exams').doc('toets3').set({
              naam:'toets3',
              cijfer:toets3})
-        }
-        if(cijfers[3]?.cijfer!==toets4&&cijfers.length>0&&toets4!==undefined){
-          db.collection('exams').doc('toets4').set({
+       }
+
+    },[toets3])
+
+    useEffect(()=>{
+      if(ready){
+       db.collection('exams').doc('toets4').set({
              naam:'toets4',
              cijfer:toets4})
-        }
-        if(cijfers[4]?.cijfer!==toets5&&cijfers.length>0&&toets5!==undefined){
-          db.collection('exams').doc('toets5').set({
+       }
+
+    },[toets4])
+
+    useEffect(()=>{
+      if(ready){
+       db.collection('exams').doc('toets5').set({
              naam:'toets5',
              cijfer:toets5})
-        }
-        if(cijfers[5]?.cijfer!==toets6&&cijfers.length>0&&toets6!==undefined){
-          db.collection('exams').doc('toets6').set({
+       }
+
+    },[toets5])
+
+    useEffect(()=>{
+      if(ready){
+       db.collection('exams').doc('toets6').set({
              naam:'toets6',
              cijfer:toets6})
-        }
-           
+       }
 
-        
+    },[toets6])
+
+    useEffect(()=>{
+      if(ready){
+       db.collection('exams').doc('toets7').set({
+             naam:'toets7',
+             cijfer:toets7})
+       }
+
+    },[toets7])
+
+    useEffect(()=>{
+      if(ready){
+       db.collection('exams').doc('toets8').set({
+             naam:'toets8',
+             cijfer:toets8})
+       }
+
+    },[toets8])
+
+    useEffect(()=>{
+      if(ready){
+       db.collection('exams').doc('toets9').set({
+             naam:'toets9',
+             cijfer:toets4})
+       }
+
+    },[toets9])
+
+    useEffect(()=>{
+      if(ready){
+       db.collection('exams').doc('toets10').set({
+             naam:'toets10',
+             cijfer:toets10})
+       }
+
+    },[toets10])
+
+    useEffect(()=>{
+      if(ready){
+       db.collection('exams').doc('toets11').set({
+             naam:'toets11',
+             cijfer:toets11})
+       }
+
+    },[toets11])
+
+    useEffect(()=>{
+      if(ready){
+       db.collection('exams').doc('toets12').set({
+             naam:'toets12',
+             cijfer:toets12})
+       }
+
+    },[toets12])
+
+    useEffect(()=>{
+      if(ready){
+       db.collection('exams').doc('toets13').set({
+             naam:'toets13',
+             cijfer:toets13})
+       }
+
+    },[toets13])
+
+    useEffect(()=>{
+      if(ready){
+       db.collection('exams').doc('toets14').set({
+             naam:'toets14',
+             cijfer:toets14})
+       }
+
+    },[toets14])
+
+    useEffect(()=>{
+      if(ready){
+       db.collection('exams').doc('toets15').set({
+             naam:'toets15',
+             cijfer:toets15})
+       }
+
+    },[toets15])
+    
+
+    
+    useEffect(()=>{
         
         if(toets1>=5.5&&toets2>=5.5&&toets3>=5.5){
             setQ1(12.5)
@@ -225,7 +353,7 @@ function Dashboard() {
            
             
             <td>2.50</td>
-            <td><input onChange={(e)=>setToets6(e.target.value)}  type="text" value={toets7}></input></td>
+            <td><input onChange={(e)=>setToets7(e.target.value)}  type="text" value={toets7}></input></td>
           </tr>
 
           <tr style={{"background-color": `${toets8>=5.5?'green':'red'}`}}>
@@ -234,7 +362,7 @@ function Dashboard() {
            
            
             <td>2.50</td>
-            <td><input onChange={(e)=>setToets7(e.target.value)}  type="text" value={toets8}></input></td>
+            <td><input onChange={(e)=>setToets8(e.target.value)}  type="text" value={toets8}></input></td>
           </tr>
 
           <tr style={{"background-color": `${toets9>=5.5?'green':'red'}`}}>
@@ -243,7 +371,7 @@ function Dashboard() {
            
            
             <td>2.50</td>
-            <td><input onChange={(e)=>setToets8(e.target.value)}  type="text" value={toets9}></input></td>
+            <td><input onChange={(e)=>setToets9(e.target.value)}  type="text" value={toets9}></input></td>
           </tr>
 
           
@@ -257,7 +385,7 @@ function Dashboard() {
            
            
             <td rowSpan='3'>10.00</td>
-            <td><input onChange={(e)=>setToets9(e.target.value)}  type="text" value={toets10}></input></td>
+            <td><input onChange={(e)=>setToets10(e.target.value)}  type="text" value={toets10}></input></td>
           </tr>
 
            <tr style={{"background-color": `${toets11>=5.5?'green':'red'}`}}>
@@ -266,7 +394,7 @@ function Dashboard() {
            
             
             
-            <td><input onChange={(e)=>setToets10(e.target.value)}  type="text" value={toets11}></input></td>
+            <td><input onChange={(e)=>setToets11(e.target.value)}  type="text" value={toets11}></input></td>
           </tr>
 
            <tr style={{"background-color": `${toets12>=5.5?'green':'red'}`}}>
@@ -275,7 +403,7 @@ function Dashboard() {
            
            
            
-            <td><input onChange={(e)=>setToets11(e.target.value)}  type="text" value={toets12}></input></td>
+            <td><input onChange={(e)=>setToets12(e.target.value)}  type="text" value={toets12}></input></td>
           </tr>
 
           <tr style={{"background-color": `${toets13>=5.5?'green':'red'}`}}>
@@ -285,7 +413,7 @@ function Dashboard() {
            
            
             <td>12.50</td>
-            <td><input onChange={(e)=>setToets12(e.target.value)}  type="text" value={toets13}></input></td>
+            <td><input onChange={(e)=>setToets13(e.target.value)}  type="text" value={toets13}></input></td>
           </tr>
 
            <tr style={{"background-color": `${toets14>=5.5?'green':'red'}`}}>
@@ -295,7 +423,7 @@ function Dashboard() {
            
            
             <td>1.25</td>
-            <td><input onChange={(e)=>setToets13(e.target.value)}  type="text" value={toets14}></input></td>
+            <td><input onChange={(e)=>setToets14(e.target.value)}  type="text" value={toets14}></input></td>
           </tr>
 
           <tr style={{"background-color": `${toets15>=5.5?'green':'red'}`}}>
