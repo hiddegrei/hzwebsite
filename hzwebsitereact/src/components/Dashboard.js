@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import "../css/Dashboard.css";
 import Chart from "react-google-charts";
- import {db} from "../firebase.js";
+//  import {db} from "../firebase.js";
 
 
 function Dashboard() {
@@ -20,9 +20,9 @@ function Dashboard() {
 
     
     useEffect(()=>{
-         db.collection('exams').add({
-             title:'hello'
-         })
+        //  db.collection('exams').add({
+        //      title:'hello'
+        //  })
         if(toets1>=5.5){
             setQ1(5)
         }
