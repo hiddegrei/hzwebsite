@@ -6,6 +6,7 @@
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  /* -ms-grid-row-span: ; */
 }
 .dash__links {
   display: flex;
@@ -52,7 +53,7 @@
   width: 80%;
   margin: auto auto;
   justify-content: space-between;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .dash__tableBox__data {
   display: flex;
