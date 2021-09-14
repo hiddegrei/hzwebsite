@@ -61,8 +61,23 @@
 }
 .home__p {
   display: flex;
+  flex-direction: column;
   font-weight: 600;
   font-size: 18px;
   margin-bottom: 20px;
   padding: 7px;
+}
+.home__ictStromingen {
+  display: flex;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
+.home__ictStromingen__pic {
+  display: flex;
+  max-width: 90%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
