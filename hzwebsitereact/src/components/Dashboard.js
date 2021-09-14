@@ -290,7 +290,7 @@ function Dashboard() {
         <div className="dash">
             
 
-            <div style={{display:'flex'}}>
+            <div className="dash__tableDiagram">
 
             <div className="dash__tableBox">
             <table  id="courses">
@@ -460,6 +460,7 @@ function Dashboard() {
             <td>{q1+q2+q3+q4+port+per1+per2}</td>
           </tr>
         </table>
+        </div>
         <div className="dash__tableBox__data">
              <div class="dash__tableBox__data__row">
             <div class="dash__tableBox__data__color" style={{"background-color": 'yellow'}}></div>
@@ -476,7 +477,7 @@ function Dashboard() {
             <div class="dash__tableBox__data__name">failed</div>
             </div>
         </div>
-        </div>
+        
         </div>
 
 <div className="dash__graph">

@@ -20,7 +20,7 @@ function SideBar() {
             
               <a href="https://apps.hz.nl/angular/studievoortgang/studiestatus" target="_blank">  study progress</a>
             
-              <a href="https://github.com/hiddegrei/hiddegrei.github.io" target="_blank"> Github</a>
+              <a href="https://github.com/hiddegrei/hzwebsite.git" target="_blank"> Github</a>
 
 {user?<div>Hi Hidde</div>:
                <a href="/login" > log in</a>}

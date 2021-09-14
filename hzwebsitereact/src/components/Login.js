@@ -30,7 +30,7 @@ if(newemail&&password){
 
         
 auth.signInWithEmailAndPassword(newemail,password).then((userCredential) => {
-    console.log(userCredential.u)
+    console.log(userCredential.uid)
     // Signed in
     var useruser = userCredential.u;
     dispatch({

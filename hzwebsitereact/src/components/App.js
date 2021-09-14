@@ -48,8 +48,10 @@ function App() {
 
         <Route path="/blog">
            <NavBar/>
+           <div style={{display:'flex'}}>
            <SideBar/>
            <Blog/>
+           </div>
         </Route>
 
         <Route path="/blogpost/:blogname">
@@ -60,8 +62,10 @@ function App() {
 
         <Route path="/">
            <NavBar/>
+           <div style={{display:'flex'}}>
            <SideBar/>
            <Home/>
+           </div>
         </Route>
        
 

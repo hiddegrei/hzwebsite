@@ -60,11 +60,22 @@
 }
 .dash__tableBox {
   display: flex;
-  width: 80%;
+  /* width: fit-content; */
   margin: auto auto;
   justify-content: space-between;
-  /* border: 1px solid red; */
 }
+@media only screen and (min-width: 600px) {
+  .dash__tableDiagram {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .dash__tableDiagram {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .dash__tableBox__data {
   display: flex;
   flex-direction: column;
