@@ -1,7 +1,9 @@
 import React from 'react';
-import "../css/SideBar.css"
+import "../css/SideBar.css";
+import {useStateValue} from "../Stateprovider";
 
 function SideBar() {
+    const[{user},dispatch]=useStateValue();
     return (
         <div className="sidebar">
              <nav class="sideNav">
@@ -19,6 +21,9 @@ function SideBar() {
               <a href="https://apps.hz.nl/angular/studievoortgang/studiestatus" target="_blank">  study progress</a>
             
               <a href="https://github.com/hiddegrei/hiddegrei.github.io" target="_blank"> Github</a>
+
+{user?<div>Hi Hidde</div>:
+               <a href="/login" > log in</a>}
             
       </nav>
             

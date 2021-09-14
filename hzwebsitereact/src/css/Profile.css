@@ -5,14 +5,31 @@
   margin-right: auto;
 }
 
-.profile__inhoud__img {
-  display: flex;
-  width: 30%;
-  height: auto;
-  /* margin: auto auto auto auto; */
-  margin-left: auto;
-  border: 1px solid black;
+@media only screen and (max-width: 600px) {
+  .profile__inhoud__img {
+    display: flex;
+    width: 60%;
+    height: auto;
+    /* margin: auto auto auto auto; */
+    margin-left: auto;
+    border: 1px solid black;
+  }
 }
+
+@media only screen and (min-width: 600px) {
+  p {
+    display: flex;
+  }
+  .profile__inhoud__img {
+    display: flex;
+    width: 30%;
+    height: auto;
+    /* margin: auto auto auto auto; */
+    margin-left: auto;
+    border: 1px solid black;
+  }
+}
+
 .profile__inhoud {
   display: flex;
   flex-direction: column;

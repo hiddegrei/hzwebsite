@@ -2,9 +2,10 @@ import React,{useState,useEffect} from 'react';
 import "../css/Dashboard.css";
 import Chart from "react-google-charts";
 import {db} from "../firebase";
-
+import {useStateValue} from "../Stateprovider";
 
 function Dashboard() {
+   const[{user},dispatch]=useStateValue();
     const [toets1,setToets1]=useState(0);
     const [toets2,setToets2]=useState(0)
     const [toets3,setToets3]=useState(0)
@@ -33,7 +34,6 @@ function Dashboard() {
      const [per2,setPer2]=useState(0)
 
     const [tryAgain,setTryAgain]=useState(false)
-
 
     useEffect(()=>{
      
@@ -104,7 +104,7 @@ function Dashboard() {
     
 
     useEffect(()=>{
-      if(ready){
+      if(ready&&user){
        
       db.collection('exams').doc('toets1').set({
              naam:'toets1',
@@ -113,7 +113,7 @@ function Dashboard() {
     },[toets1])
 
     useEffect(()=>{
-      if(ready){
+      if(ready&&user){
        db.collection('exams').doc('toets2').set({
              naam:'toets2',
              cijfer:toets2})
@@ -122,7 +122,7 @@ function Dashboard() {
     },[toets2])
 
     useEffect(()=>{
-      if(ready){
+      if(ready&&user){
        db.collection('exams').doc('toets3').set({
              naam:'toets3',
              cijfer:toets3})
@@ -131,7 +131,7 @@ function Dashboard() {
     },[toets3])
 
     useEffect(()=>{
-      if(ready){
+      if(ready&&user){
        db.collection('exams').doc('toets4').set({
              naam:'toets4',
              cijfer:toets4})
@@ -140,7 +140,7 @@ function Dashboard() {
     },[toets4])
 
     useEffect(()=>{
-      if(ready){
+      if(ready&&user){
        db.collection('exams').doc('toets5').set({
              naam:'toets5',
              cijfer:toets5})
@@ -149,7 +149,7 @@ function Dashboard() {
     },[toets5])
 
     useEffect(()=>{
-      if(ready){
+      if(ready&&user){
        db.collection('exams').doc('toets6').set({
              naam:'toets6',
              cijfer:toets6})
@@ -158,7 +158,7 @@ function Dashboard() {
     },[toets6])
 
     useEffect(()=>{
-      if(ready){
+      if(ready&&user){
        db.collection('exams').doc('toets7').set({
              naam:'toets7',
              cijfer:toets7})
@@ -167,7 +167,7 @@ function Dashboard() {
     },[toets7])
 
     useEffect(()=>{
-      if(ready){
+      if(ready&&user){
        db.collection('exams').doc('toets8').set({
              naam:'toets8',
              cijfer:toets8})
@@ -176,7 +176,7 @@ function Dashboard() {
     },[toets8])
 
     useEffect(()=>{
-      if(ready){
+      if(ready&&user){
        db.collection('exams').doc('toets9').set({
              naam:'toets9',
              cijfer:toets4})
@@ -185,7 +185,7 @@ function Dashboard() {
     },[toets9])
 
     useEffect(()=>{
-      if(ready){
+      if(ready&&user){
        db.collection('exams').doc('toets10').set({
              naam:'toets10',
              cijfer:toets10})
@@ -194,7 +194,7 @@ function Dashboard() {
     },[toets10])
 
     useEffect(()=>{
-      if(ready){
+      if(ready&&user){
        db.collection('exams').doc('toets11').set({
              naam:'toets11',
              cijfer:toets11})
@@ -203,7 +203,7 @@ function Dashboard() {
     },[toets11])
 
     useEffect(()=>{
-      if(ready){
+      if(ready&&user){
        db.collection('exams').doc('toets12').set({
              naam:'toets12',
              cijfer:toets12})
@@ -212,7 +212,7 @@ function Dashboard() {
     },[toets12])
 
     useEffect(()=>{
-      if(ready){
+      if(ready&&user){
        db.collection('exams').doc('toets13').set({
              naam:'toets13',
              cijfer:toets13})
@@ -221,7 +221,7 @@ function Dashboard() {
     },[toets13])
 
     useEffect(()=>{
-      if(ready){
+      if(ready&&user){
        db.collection('exams').doc('toets14').set({
              naam:'toets14',
              cijfer:toets14})
@@ -230,7 +230,7 @@ function Dashboard() {
     },[toets14])
 
     useEffect(()=>{
-      if(ready){
+      if(ready&&user){
        db.collection('exams').doc('toets15').set({
              naam:'toets15',
              cijfer:toets15})
@@ -244,24 +244,38 @@ function Dashboard() {
         
         if(toets1>=5.5&&toets2>=5.5&&toets3>=5.5){
             setQ1(12.5)
+        }else{
+          setQ1(0)
         }
         if(toets4>=5.5&&toets5>=5.5){
             setQ2(10)
+        }else{
+          setQ2(0)
         }
         if(toets6>=5.5&&toets7>=5.5&&toets8>=5.5&&toets9>=5.5){
             setQ3(12.5)
+        }else{
+          setQ3(0)
         }
         if(toets10>=5.5&&toets11>=5.5&&toets12>=5.5){
             setQ4(10)
+        }else{
+          setQ4(0)
         }
         if(toets11>=5.5){
           setPort(12.5)
+        }else{
+          setPort(0)
         }
         if(toets12>=5.5){
           setPer1(1.25)
+        }else{
+          setPer1(0)
         }
         if(toets13>=5.5){
           setPer2(1.25)
+        }else{
+          setPer2(0)
         }
         
 
@@ -289,17 +303,17 @@ function Dashboard() {
             <th>grade</th>
           </tr>
 
-          <tr style={{"background-color": `${toets1>=5.5?'green':'red'}`}}>
+          <tr style={{"background-color": `${toets1==0&&'yellow'||toets1>=5.5&&'green'||toets1<5.5&&'red'}`}}>
                <td rowSpan='3'>1</td>
                <td>CU75002V2 - Computer science basics</td>
             <td>TOETS01 - Theorietentamen</td>
            
             
             <td>7.50</td>
-            <td><input onChange={(e)=>setToets1(e.target.value)}  type="text" value={toets1}></input></td>
+            <td><input onChange={(e)=>{if(user){setToets1(e.target.value)}}}  type="text" value={toets1}></input></td>
           </tr>
 
-           <tr style={{"background-color": `${toets2>=5.5?'green':'red'}`}}>
+           <tr style={{"background-color": `${toets2==0&&'yellow'||toets2>=5.5&&'green'||toets2<5.5&&'red'}`}}>
                <td>CU75002V2 - Programme and Career Orientation</td>
               
             <td>TOETS01 - Assesment</td>
@@ -309,7 +323,7 @@ function Dashboard() {
             <td><input onChange={(e)=>setToets2(e.target.value)}  type="text" value={toets2}></input></td>
           </tr>
 
-           <tr style={{"background-color": `${toets3>=5.5?'green':'red'}`}}>
+           <tr style={{"background-color": `${toets3==0&&'yellow'||toets3>=5.5&&'green'||toets3<5.5&&'red'}`}}>
                <td>CU75002V2 - Programming Basics</td>
             <td>TOETS01 - Casus toets</td>
            
@@ -318,7 +332,7 @@ function Dashboard() {
             <td><input onChange={(e)=>setToets3(e.target.value)}  type="text" value={toets3}></input></td>
           </tr>
 
-          <tr style={{"background-color": `${toets4>=5.5?'green':'red'}`}}>
+          <tr style={{"background-color": `${toets4==0&&'yellow'||toets4>=5.5&&'green'||toets4<5.5&&'red'}`}}>
                <td rowSpan='2' >2</td>
                <td rowSpan='2'>CU75004V1 - Object-oriented programming</td>
             <td>TOETS01 - Casustoets</td>
@@ -328,7 +342,7 @@ function Dashboard() {
             <td><input onChange={(e)=>setToets4(e.target.value)}  type="text" value={toets4}></input></td>
           </tr>
 
-          <tr style={{"background-color": `${toets5>=5.5?'green':'red'}`}}>
+          <tr style={{"background-color": `${toets5==0&&'yellow'||toets5>=5.5&&'green'||toets5<5.5&&'red'}`}}>
                {/* <td  >2</td> */}
                
             <td>TOETS02 - groepsopdracht</td>
@@ -337,7 +351,7 @@ function Dashboard() {
             <td><input onChange={(e)=>setToets5(e.target.value)}  type="text" value={toets5}></input></td>
           </tr>
 
-          <tr style={{"background-color": `${toets6>=5.5?'green':'red'}`}}>
+          <tr style={{"background-color": `${toets6==0&&'yellow'||toets6>=5.5&&'green'||toets6<5.5&&'red'}`}}>
                 <td rowSpan='4'>3</td>
                 <td>Framework Development 1</td>
             <td>Case study</td>
@@ -347,7 +361,7 @@ function Dashboard() {
             <td><input onChange={(e)=>setToets6(e.target.value)}  type="text" value={toets6}></input></td>
           </tr>
 
-          <tr style={{"background-color": `${toets7>=5.5?'green':'red'}`}}>
+          <tr style={{"background-color": `${toets7==0&&'yellow'||toets7>=5.5&&'green'||toets7<5.5&&'red'}`}}>
                <td rowSpan='3'>Framework Project 1</td>
             <td>Project</td>
            
@@ -356,7 +370,7 @@ function Dashboard() {
             <td><input onChange={(e)=>setToets7(e.target.value)}  type="text" value={toets7}></input></td>
           </tr>
 
-          <tr style={{"background-color": `${toets8>=5.5?'green':'red'}`}}>
+          <tr style={{"background-color": `${toets8==0&&'yellow'||toets8>=5.5&&'green'||toets8<5.5&&'red'}`}}>
                
             <td>assesment</td>
            
@@ -365,7 +379,7 @@ function Dashboard() {
             <td><input onChange={(e)=>setToets8(e.target.value)}  type="text" value={toets8}></input></td>
           </tr>
 
-          <tr style={{"background-color": `${toets9>=5.5?'green':'red'}`}}>
+          <tr style={{"background-color": `${toets9==0&&'yellow'||toets9>=5.5&&'green'||toets9<5.5&&'red'}`}}>
                
             <td>Report</td>
            
@@ -378,7 +392,7 @@ function Dashboard() {
 
           
 
-          <tr style={{"background-color": `${toets10>=5.5?'green':'red'}`}}>
+          <tr style={{"background-color": `${toets10==0&&'yellow'||toets10>=5.5&&'green'||toets10<5.5&&'red'}`}}>
                <td rowSpan='3'>4</td>
                 <td rowSpan='3'>Framework Project 2</td>
             <td>Portfolio</td>
@@ -388,7 +402,7 @@ function Dashboard() {
             <td><input onChange={(e)=>setToets10(e.target.value)}  type="text" value={toets10}></input></td>
           </tr>
 
-           <tr style={{"background-color": `${toets11>=5.5?'green':'red'}`}}>
+           <tr style={{"background-color": `${toets11==0&&'yellow'||toets11>=5.5&&'green'||toets11<5.5&&'red'}`}}>
               
             <td>Project</td>
            
@@ -397,7 +411,7 @@ function Dashboard() {
             <td><input onChange={(e)=>setToets11(e.target.value)}  type="text" value={toets11}></input></td>
           </tr>
 
-           <tr style={{"background-color": `${toets12>=5.5?'green':'red'}`}}>
+           <tr style={{"background-color": `${toets12==0&&'yellow'||toets12>=5.5&&'green'||toets12<5.5&&'red'}`}}>
                 
             <td>Assesment</td>
            
@@ -406,7 +420,7 @@ function Dashboard() {
             <td><input onChange={(e)=>setToets12(e.target.value)}  type="text" value={toets12}></input></td>
           </tr>
 
-          <tr style={{"background-color": `${toets13>=5.5?'green':'red'}`}}>
+          <tr style={{"background-color": `${toets13==0&&'yellow'||toets13>=5.5&&'green'||toets13<5.5&&'red'}`}}>
                 <td>entire year</td>
             <td>Portfolio</td>
             <td>Portfolio</td>
@@ -416,7 +430,7 @@ function Dashboard() {
             <td><input onChange={(e)=>setToets13(e.target.value)}  type="text" value={toets13}></input></td>
           </tr>
 
-           <tr style={{"background-color": `${toets14>=5.5?'green':'red'}`}}>
+           <tr style={{"background-color": `${toets14==0&&'yellow'||toets14>=5.5&&'green'||toets14<5.5&&'red'}`}}>
                 <td>entire year</td>
             <td>Personality 1</td>
             <td>Personality 1</td>
@@ -426,7 +440,7 @@ function Dashboard() {
             <td><input onChange={(e)=>setToets14(e.target.value)}  type="text" value={toets14}></input></td>
           </tr>
 
-          <tr style={{"background-color": `${toets15>=5.5?'green':'red'}`}}>
+          <tr style={{"background-color": `${toets15==0&&'yellow'||toets15>=5.5&&'green'||toets15<5.5&&'red'}`}}>
                 <td>entire year</td>
             <td>Personality 2</td>
             <td>Personality 2</td>
@@ -442,7 +456,7 @@ function Dashboard() {
            
             <td></td>
             <td></td>
-            <td>45</td>
+            <td>60</td>
             <td>{q1+q2+q3+q4+port+per1+per2}</td>
           </tr>
         </table>

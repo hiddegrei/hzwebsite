@@ -6,15 +6,25 @@ function Home() {
         <div className="home">
 
             <p className="home__p">Ik ben 1.5 jaar geleden begonnen met programmeren. 
-            In die tijd ben ik bezig geweest om hele simpele games te maken met javascript 
-                en op een gegeven moment kwam ik via youtube erop om websites te maken met React.
-                Ik wilde een simpele social media website maken, doordat ik steeds nieuwe dingen wilde toevoegen aan mijn website
-                werd ik gedwongen om alles uit te gaan zoeken via het internet. Het resultaat is te vinden op <a target="_blank" href="socialhit.nl">socialhit.nl</a>
+            Ik heb via Youtube de basis principes geleerd van Javascript, door simpele games te maken, zoals flappy-bird, kreeg ik javascript aardig onder de knie
+              . Ik merkte al snel dat het erg leuk en interessant was om continu nieuwe dingen te leren waardoor je je projecten kan verbeteren. 
+              Vorig jaar heb ik Wiskunde gestudeerd in Utrecht, waar ik vakken heb gevolgd die gingen over lineaire algebra, bijvoorbeeld matrix vermenigvuldiging. 
+              Door deze kennis kon begrijpen hoe een simpel genetische algoritme werkt, dit heb ik dan ook toegepast om de computer de leren om flappy-bird te spelen.
+              
+              Ik kwam toen React tegen op het internet, een library waarmee je gemakkelijk javascript en Html code samen kunt gebruiken. Toen vond ik het een leuk idee
+              om een simpel social media website te maken met React. Ik weet nog niet veel van backend code dus dat liet ik over aan firebase. Doordat ik tegen problemen aanliep
+              wanneer ik nieuwe dingen aan mijn website wilde toevoegen werd ik gedwongen het zelf uit te zoeken via het internet. 
+
+              Het resultaat van dit leerprocess is nu te zien op socialhit.nl
+
+              Ik vind dit leer process erg leuk
+              en dat is ook waarom ik denk ik bij de HZ ICT opleiding op de goeie plek.
             </p>
 
-            <p className="home__p">Ik heb wiskunde en programmeren altijd al interessant gevonden
-             en ik ben continu benieuwd naar nieuwe dingen die ik kan leren. 
-             Ik denk dat ik bij de opleiding ICT op de Hz op de goeie plek zit en ik verwacht dat ik veel zal kunnen leren.
+            <p className="home__p">
+                Omdat ik nog maar vrij recent begonnnen ben met programmeren en ik nog niet heel veel gezien heb is het moeilijk om te zeggen wat voor baan 
+                ik later leuk ga vinden. Op dit moment denk ik wel dat ik werk als data scientist of back end developer, en het de echte technishe dingen in het programmeren het leukst vind.
+
             </p>
 
 

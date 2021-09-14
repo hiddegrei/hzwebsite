@@ -7,12 +7,13 @@ import SideBar from "./SideBar"
 import Faq from "./Faq"
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import Dashboard from './Dashboard';
-import BlogPostPage from './BlogPostPage'
+import BlogPostPage from './BlogPostPage';
+import Login from "./Login"
 
 function App() {
   return (
     <Router>
-      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      
     <div className="app">
       <Switch>
         
@@ -27,8 +28,16 @@ function App() {
 
         <Route path="/dashboard">
            <NavBar/>
+           <div style={{display:'flex'}}>
            <SideBar/>
            <Dashboard/>
+           </div>
+        </Route>
+
+        <Route path="/login">
+           <NavBar/>
+           
+           <Login/>
         </Route>
 
         <Route path="/faq">
