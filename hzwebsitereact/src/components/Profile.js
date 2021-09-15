@@ -27,7 +27,7 @@ function Profile() {
               <p >
                   In mijn vrije tijd doe ik aan wielrennen,hardlopen en zwemmen. Fietsen doe ik door heel zeeland en soms een tochtje door België of over de Utrechtse heuvelrug.
                   Hardlopen doe ik over het strand en over de duinen rond Dishoek, en het zwemmen doe ik in het vrijburgbad in Vlissingen.
-                  <img alt=""  class="profile__inhoud__img" src={bikefoto}></img>
+                  <img alt="actie foto wielrennen hidde greijdanus"  class="profile__inhoud__img" src={bikefoto}></img>
 
               </p>
               </article>
@@ -44,7 +44,7 @@ function Profile() {
               <p>
                   Ik woon in Dishoek in de buurt van Koudekerke.
               </p>
-              <img alt=""  class="profile__inhoud__img" src={dishoekFoto}></img>
+              <img alt="foto duinen van dishoek"  class="profile__inhoud__img" src={dishoekFoto}></img>
               </article>
               
 

@@ -12,6 +12,7 @@ function SideBar() {
               <a href="https://hz.nl/" target="_blank">Hz.nl</a>
            
               <a href="https://hz.nl/over-de-hz/regelingen-documenten-1/onderwijs-en-examenregelingen" target="_blank">CER</a>
+              <a href="https://hz.nl/uploads/documents/Regelingen/OERS/2019-2020/2020-2021-ICT-Implementation-Regulations-CER-HZ-DEF1.0.pdf" target="_blank">IR</a>
             
               <a href="https://learn.hz.nl/" target="_blank"> Learn</a>
             

@@ -9,6 +9,8 @@ import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import Dashboard from './Dashboard';
 import BlogPostPage from './BlogPostPage';
 import Login from "./Login"
+import Reset from "./Reset"
+import ForgotPassword from "./ForgotPassword"
 
 function App() {
   return (
@@ -34,6 +36,11 @@ function App() {
            </div>
         </Route>
 
+        <Route exact path="/forgotpassword">
+        <ForgotPassword/>
+        </Route>
+
+
         <Route path="/login">
            <NavBar/>
            
@@ -58,6 +65,10 @@ function App() {
            <NavBar/>
            <SideBar/>
            <BlogPostPage/>
+        </Route>
+
+        <Route  path="/__/auth/action">
+        <Reset/>
         </Route>
 
         <Route path="/">

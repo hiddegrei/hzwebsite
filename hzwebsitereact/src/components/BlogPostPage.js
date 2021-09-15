@@ -7,6 +7,7 @@ function BlogPostPage() {
      const [studiekeuze,setStudiekeuze]=useState(false)
      const [progervaring,setProgervaring]=useState(false)
      const [damen,setDamen]=useState(false)
+     const [capgemini,setCapgemini]=useState(false)
 
      useEffect(()=>{
          console.log(blogname)
@@ -16,6 +17,8 @@ function BlogPostPage() {
              setProgervaring(true)
          }else if(blogname==='damennaval'){
              setDamen(true)
+         }else if(blogname==='capgemini'){
+             setCapgemini(true)
          }
 
 
@@ -25,15 +28,15 @@ function BlogPostPage() {
     return (
         <div className="blogPostPage">
 
-            {studiekeuze&&<div >
+            {studiekeuze&&<article >
                 <h3 >Studiekeuze</h3>
                 <p >Voordat ik aan de studie ICT op de HZ begon studeerde ik Wiskunde in Utrecht, ik had toen voor de studie Wiskunde
                     gekozen omdat wiskundige problemen interessant vond en ook graag wilde leren programmeren. Deze studie bleek echter te lastig en te theoretisch,
                     daarom heb ik gekozen voor de wat voor praktische studie ICT op het Hbo.
                 </p>
-            </div>}
+            </article>}
 
-            {progervaring&&<div>
+            {progervaring&&<article>
                 <h3>programmering ervaring</h3>
                 <p>
                     Ik ben na mijn mislukte studie Wiskunde begonnen met programmeren. Ik ben begonnen met het leren van javascript, ik heb nu denk ik zelf de basis technieken van javascript onder de knie waardoor
@@ -43,9 +46,9 @@ function BlogPostPage() {
                     te vergroten.
 
                 </p>
-                </div>}
+                </article>}
 
-                {damen&&<div>
+                {damen&&<article>
                 <h3>Lezing Damen Naval</h3>
                 <p>
                     Ik heb op 10 september 2021 de mogelijkheid gehad om een lezing bij te wonen van Daman Naval.
@@ -57,7 +60,27 @@ function BlogPostPage() {
                     En in dit precisie werk komt erg veel ICT kijken. Daarom lijkt het mij ook ontzettend leuk en interressant om stage te lopen bij Damen.
                     
                 </p>
-                </div>}
+                </article>}
+
+                {capgemini&&<article>
+                <h3>capgemini</h3>
+                <p>
+                   Capgemini is een frans consultancybedrijf. 
+                   Het geeft ICT gerelateerde adviezen aan andere bedrijven.
+                   Capgemini is een wereldwijd bedrijf met 290.000 mensen verspreid door 50 landen. Het hoofdkantoor zit in Parijs.
+                   Gapgemini loopt voorop op het gebied van innovatie, ze zijn eigenlijk van alle markten thuis.
+                    Zo omvatten de technologische diensten van Capgemini: automatisering(artificial intelligence), 
+                    infrastructuur, applicatieontwikkeling en ondehoud, testen en eindgebruikersdiensten.
+
+                    Capgemini gebruikt verschillende programmeertalen, waardonder Java, c++ en python.
+                   Mail naar stagebureau.nl@capgemini.com voor meer informatie voor een (afstudeer)stage.
+                    
+
+
+
+
+                </p>
+                </article>}
             
         </div>
     )
