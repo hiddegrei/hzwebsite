@@ -49,8 +49,11 @@ function App() {
 
         <Route path="/faq">
            <NavBar/>
+            <div style={{display:'flex'}}>
            <SideBar/>
-           <Faq/>
+            <Faq/>
+           </div>
+          
         </Route>
 
         <Route path="/blog">

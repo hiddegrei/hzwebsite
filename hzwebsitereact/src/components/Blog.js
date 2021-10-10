@@ -15,6 +15,8 @@ function Blog() {
 
             <BlogPost title="ICT lezing Damen Naval" link="/blogpost/damennaval"/>
              <BlogPost title="Capgemini" link="/blogpost/capgemini"/>
+
+             <BlogPost title="Feedback pitch" link="/blogpost/feedbackpitch"/>
         </div>
     )
 }

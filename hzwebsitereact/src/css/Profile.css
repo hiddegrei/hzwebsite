@@ -1,6 +1,7 @@
 .profile {
   display: flex;
   width: 90%;
+  margin-top:50px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -35,7 +36,7 @@
   flex-direction: column;
   border: 1px solid black;
   width: 80%;
-  margin-top: 120px;
+ 
   margin-left: auto;
   margin-right: auto;
   height: fit-content;

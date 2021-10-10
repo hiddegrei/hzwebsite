@@ -8,9 +8,11 @@ function BlogPostPage() {
      const [progervaring,setProgervaring]=useState(false)
      const [damen,setDamen]=useState(false)
      const [capgemini,setCapgemini]=useState(false)
+     const [feedbackPitch,setFeedbackPitch]=useState(false)
+     
 
      useEffect(()=>{
-         console.log(blogname)
+         
          if(blogname==='studiekeuze'){
              setStudiekeuze(true)
          }else if(blogname==='progervaring'){
@@ -19,6 +21,8 @@ function BlogPostPage() {
              setDamen(true)
          }else if(blogname==='capgemini'){
              setCapgemini(true)
+         }else if(blogname==='feedbackpitch'){
+             setFeedbackPitch(true)
          }
 
 
@@ -74,6 +78,49 @@ function BlogPostPage() {
 
                     Capgemini gebruikt verschillende programmeertalen, waardonder Java, c++ en python.
                    Mail naar stagebureau.nl@capgemini.com voor meer informatie voor een (afstudeer)stage.
+                    
+
+
+
+
+                </p>
+                </article>}
+
+                
+
+                {feedbackPitch&&<article>
+                <h2>Feedback pitch</h2>
+
+                <h4>Compliments</h4>
+                <p>
+                 
+                    
+
+
+
+
+                </p>
+                <h4>Improvements</h4>
+                <p>
+                 
+                    
+
+
+
+
+                </p>
+                <h4>Code Review Feedback</h4>
+                <p>
+                 
+                    
+
+
+
+
+                </p>
+                <h4>Tasks</h4>
+                <p>
+                 
                     
 
 
