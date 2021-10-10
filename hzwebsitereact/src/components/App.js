@@ -112,8 +112,10 @@ function App() {
 
           <Route path="/blogpost/:blogname">
             <NavBar />
-            <SideBar />
-            <BlogPostPage />
+            <div style={{ display: "flex" }}>
+              <SideBar />
+              <BlogPostPage />
+            </div>
           </Route>
 
           <Route path="/__/auth/action">

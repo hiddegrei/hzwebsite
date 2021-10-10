@@ -40,7 +40,7 @@ function BlogPostPage() {
       <div className="blogPostPage__main">
         {studiekeuze && (
           <article>
-            <h3>Studiekeuze</h3>
+            <h2>Studiekeuze</h2>
             <p>
               Voordat ik aan de studie ICT op de HZ begon studeerde ik Wiskunde
               in Utrecht, ik had toen voor de studie Wiskunde gekozen omdat
@@ -54,7 +54,7 @@ function BlogPostPage() {
 
         {progervaring && (
           <article>
-            <h3>programmering ervaring</h3>
+            <h2>programmering ervaring</h2>
             <p>
               Ik ben na mijn mislukte studie Wiskunde begonnen met programmeren.
               Ik ben begonnen met het leren van javascript, ik heb nu denk ik
@@ -72,7 +72,7 @@ function BlogPostPage() {
 
         {damen && (
           <article>
-            <h3>Lezing Damen Naval</h3>
+            <h2>Lezing Damen Naval</h2>
             <p>
               Ik heb op 10 september 2021 de mogelijkheid gehad om een lezing
               bij te wonen van Daman Naval. Dit was ontzettend interessant en ik
@@ -94,7 +94,7 @@ function BlogPostPage() {
 
         {capgemini && (
           <article>
-            <h3>capgemini</h3>
+            <h2>capgemini</h2>
             <p>
               Capgemini is een frans consultancybedrijf. Het geeft ICT
               gerelateerde adviezen aan andere bedrijven. Capgemini is een
@@ -114,7 +114,7 @@ function BlogPostPage() {
 
         {feedbackPitch && (
           <article>
-            <h2>Feedback pitch</h2>
+            <h3>Feedback pitch</h3>
 
             <h4>Compliments</h4>
             <p></p>
@@ -129,7 +129,11 @@ function BlogPostPage() {
       </div>
       <div className="blogpostpage__comments">
         {comments.map((doc) => (
-          <Comment username={doc.username} text={doc.text} />
+          <Comment
+            key={doc.createdAt}
+            username={doc.username}
+            text={doc.text}
+          />
         ))}
       </div>
       <PostBox blogname={blogname} />

@@ -31,6 +31,7 @@ function Login() {
             type: "SET_USER",
             user: useruser,
           });
+          console.log(useruser);
 
           if (useruser.src.uid) {
             db.collection("users")
