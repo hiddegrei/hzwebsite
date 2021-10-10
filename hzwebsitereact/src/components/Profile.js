@@ -5,12 +5,8 @@ import dishoekFoto from "../images/dishoekvuurtoren.jpg"
 
 function Profile() {
     return (
-        <div className="profile">
-
-           
-          {/* <img alt=""  class="profile__inhoud__img" src={bikefoto}></img> */}
-
-          <div class="profile__inhoud">
+        
+          <div className="profile">
               <h2  style={{display:'flex'}}>Wie ben ik?</h2>
               <article>
               <p >
@@ -51,7 +47,7 @@ function Profile() {
           </div>
       
             
-        </div>
+        
     )
 }
 
