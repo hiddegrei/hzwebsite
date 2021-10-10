@@ -1,24 +1,14 @@
-.dash {
-  display: flex;
-  flex: 0.9;
-  flex-direction: column;
-  margin-top: 50px;
-  width: 90%;
-  margin-left: auto;
+.tweetbox {
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+  padding-right: 10px;
+  height: 150px;
+  width:400px;
+  height:fit-content;
+  margin-left:auto;
   margin-right: auto;
-  /* -ms-grid-row-span: ; */
-}
-.dash__links {
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  border: 1px solid black;
-}
-#courses {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  font-size: 10px;
-  width: 80%;
+  margin-top: 50px;
+  background-color: white;
 
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -63,92 +53,120 @@
     inset 9px 0 6px -3px rgb(0 0 0 / 30%),
     inset -9px 0 6px -3px rgb(0 0 0 / 30%);
 }
-
-#courses tr:nth-child(even) {
-  background-color: white;
+.tweetBox__extend {
+  height: 450px !important;
 }
 
-#courses tr:hover {
-  background-color: #ddd;
-}
-
-#courses th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #04aa6d;
-  color: white;
-}
-#chart_div {
-  display: flex;
-  margin: auto auto;
-}
-
-@media only screen and (max-width: 600px) {
-  #courses td,
-  #courses th {
-    border: 1px solid #ddd;
-    padding: 4px;
-    font-size: 12px;
-  }
-}
-@media only screen and (min-width: 600px) {
-  #courses td,
-  #courses th {
-    border: 1px solid #ddd;
-    padding: 8px;
-    font-size: 20px;
-  }
-}
-.dash__tableBox {
-  display: flex;
-  /* width: fit-content; */
-  margin: auto auto;
-  justify-content: space-between;
-}
-@media only screen and (min-width: 600px) {
-  .dash__tableDiagram {
-    display: flex;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .dash__tableDiagram {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.dash__tableBox__data {
+.tweetBox > form {
   display: flex;
   flex-direction: column;
-  width: fit-content;
-  height: fit-content;
-  align-items: center;
-  place-content: center;
 }
-.dash__tableBox__data__row {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-.dash__tableBox__data__color {
-  display: flex;
-  width: 13px;
-  height: 13px;
-  border: 1px solid black;
-}
-.dash__tableBox__data__name {
-  display: flex;
-  margin-left: 10px;
-  font-weight: 600;
-  font-size: 15px;
-}
-.dash__graph {
-  display: flex;
-  margin-top: 30px;
-  width: 100%;
-  /* border: 1px solid black; */
-  place-content: center;
 
+.tweetBox__input {
+  padding: 10px;
+  display: flex;
+}
+.tweetBox__input > input {
+  flex: 1;
+  margin-left: 20px;
+  font-size: 20px;
+  border: none;
+}
+.maxchar2 {
+  display: flex;
+  text-align: center;
+  z-index: 100;
+  margin-left: 3px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.bytes {
+  color: black;
+}
+.addedImage {
+  width: 35px;
+  height: 35px;
+}
+.addedImageCon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tweetBox__tweetButton {
+   display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--twitter-color) !important;
   
+  color: white !important;
+  font-weight: 900 !important;
+  text-transform: inherit !important;
+  border-radius: 30px !important;
+  height: 50px !important;
+  margin-top: 20px !important;
+  margin-left: auto !important;
+  border:1px solid black;
+
+}
+
+.tweetBox__tweetButtonO {
+  opacity: 0.5;
+}
+
+.tweetBox__footer {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+.tweetBox__2 {
+  padding-bottom: 10px;
+
+  padding-right: 10px;
+  height: 150px;
+}
+.tweetBox__2 > form {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweet__poll {
+  display: flex;
+  height: 300px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.repeat__closeButton {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid var(--twitter-background);
+}
+.tweet__poll__input {
+  display: flex;
+
+  align-items: center;
+  background-color: var(--twitter-background);
+  padding: 10px;
+  border-radius: 20px;
+}
+.pickerContainer {
+  z-index: 110;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: 210px;
+  left: 37%;
+}
+.picker__button {
+  color: white;
 }

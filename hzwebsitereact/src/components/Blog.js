@@ -1,25 +1,25 @@
-import React from 'react';
+import React from "react";
 import "../css/Blog.css";
-import BlogPost from "./BlogPost"
+import BlogPost from "./BlogPost";
 
 function Blog() {
-    return (
-        <div className="blog">
+  return (
+    <div className="blog">
+      <BlogPost
+        title="HTML5 best practices; section/header/aside/article elements"
+        link="https://stackoverflow.com/questions/4781077/html5-best-practices-section-header-aside-article-elements"
+      />
 
-            <BlogPost title="HTML5 best practices; section/header/aside/article elements" 
-            link="https://stackoverflow.com/questions/4781077/html5-best-practices-section-header-aside-article-elements"/>
-            
-            <BlogPost title="programmering ervaring" link="/blogpost/progervaring"/>
+      <BlogPost title="programmering ervaring" link="/blogpost/progervaring" />
 
-            <BlogPost title="Studiekeuze" link="/blogpost/studiekeuze"/>
+      <BlogPost title="Studiekeuze" link="/blogpost/studiekeuze" />
 
-            <BlogPost title="ICT lezing Damen Naval" link="/blogpost/damennaval"/>
-             <BlogPost title="Capgemini" link="/blogpost/capgemini"/>
+      <BlogPost title="ICT lezing Damen Naval" link="/blogpost/damennaval" />
+      <BlogPost title="Capgemini" link="/blogpost/capgemini" />
 
-             <BlogPost title="Feedback pitch" link="/blogpost/feedbackpitch"/>
-        </div>
-    )
+      <BlogPost title="Feedback pitch" link="/blogpost/feedbackpitch" />
+    </div>
+  );
 }
 
-export default Blog
-
+export default Blog;
