@@ -67,36 +67,6 @@ function Login() {
     }
   };
 
-  //     const register=(e)=>{
-  //         e.preventDefault();
-  //         if(username){
-  // db.collection('users').where('username','==',username).get().then(doc=>{
-  //     if(doc.exists){
-  //         return alert(username+':this username is already taken')
-  //     }else{
-  // auth.createUserWithEmailAndPassword(email,password).then((userCredential) => {
-  //     // Signed in
-  //     var newuser = userCredential.user;
-  //     db.collection('users').doc(`${username}`).set({
-  //     username:username,
-  //     email:newuser.email,
-  //     userId:newuser.uid,
-  //     following:0,
-  //     followers:0,
-  //     imageUrl:'',
-  //     bio:'',
-
-  // })})
-  //         .then((auth)=>{
-  //             setOpen(true)
-  //         }).catch(error=>alert(error.message))
-  //     }
-  // })
-
-  // }else{alert('please enter username')}
-
-  //     }
-
   useEffect(() => {
     if (open) {
       setTimeout(() => {
@@ -110,9 +80,6 @@ function Login() {
         <h1>sign in</h1>
 
         <form>
-          {/* <h5>Username</h5>
-                <input onChange={(e)=>setUsername(e.target.value)}value={username} type="text"></input> */}
-
           <h5>Email</h5>
           <input
             onChange={(e) => setEmail(e.target.value)}

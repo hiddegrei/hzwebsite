@@ -28,14 +28,7 @@ function ForgotPassword() {
       });
   };
   return (
-    <div className="login">
-      <Link to="/">
-        <img
-          className="header__logo"
-          id="myimg"
-          src="https://firebasestorage.googleapis.com/v0/b/twitterclone-6c140.appspot.com/o/socialHit.jpg.jpg?alt=media&token=421646ee-5d89-4c89-8eab-57d3c88174f6"
-        ></img>
-      </Link>
+    <div className="login" style={{ marginTop: "50px" }}>
       <div className="login__container">
         <h1>Reset Password</h1>
         <form>

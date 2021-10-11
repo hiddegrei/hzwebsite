@@ -80,6 +80,7 @@ function App() {
           </Route>
 
           <Route exact path="/forgotpassword">
+            <NavBar />
             <ForgotPassword />
           </Route>
 
@@ -130,6 +131,7 @@ function App() {
             </div>
           </Route>
         </Switch>
+        <div className="app__logo">By Hidde Greijdanus</div>
       </div>
     </Router>
   );

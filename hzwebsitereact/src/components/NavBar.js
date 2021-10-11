@@ -3,15 +3,13 @@ import "../css/NavBar.css";
 import { Link } from "react-router-dom";
 import MenuIcon from "@material-ui/icons/Menu";
 
-function NavBar({ active }) {
+function NavBar() {
   const [home, setHome] = useState(false);
   const [profile, setProfile] = useState(false);
   const [faq, setFaq] = useState(false);
   const [dashboard, setDashboard] = useState(false);
   const [blog, setBlog] = useState(false);
   const [dropDown, setDropDown] = useState(false);
-
-  const [small, setSmall] = useState(false);
 
   var getUrl = window.location;
 
@@ -47,7 +45,7 @@ function NavBar({ active }) {
       setFaq(true);
     } else if (getUrl.pathname === "/dashboard") {
       setDashboard(true);
-    } else if (getUrl.pathname === "/blog") {
+    } else if (getUrl.pathname[0] === "/") {
       setBlog(true);
     }
   }, [getUrl.pathname]);

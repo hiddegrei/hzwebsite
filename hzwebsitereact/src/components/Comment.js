@@ -10,7 +10,7 @@ function Comment({ username, text }) {
           <Avatar src="" />
           <p className="comment__user__name">{username}</p>
         </div>
-        <p className="comment__user__text"> {text}</p>
+        <p className="comment__body__text"> {text}</p>
       </div>
     </div>
   );

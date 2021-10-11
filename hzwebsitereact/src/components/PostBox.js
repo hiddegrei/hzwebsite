@@ -114,9 +114,9 @@ function PostBox({ blogname }) {
   }, [tweetMessage]);
 
   return (
-    <div className="tweetbox">
+    <div className="postbox">
       <form>
-        <div className="tweetBox__input">
+        <div className="postbox__input">
           <Avatar src={profile.imageUrl}></Avatar>
 
           <input
@@ -137,16 +137,16 @@ function PostBox({ blogname }) {
           )}
         </div>
 
-        <div className="tweetBox__footer">
+        <div className="postbox__footer">
           <div
-            className={`tweetBox__tweetbutton ${
-              !tweetMessage && "tweetBox__tweetButtonO"
+            className={`postbox__postbutton ${
+              !tweetMessage && "postbox__postButtonO"
             }`}
           >
             <Button
               onClick={sendTweet}
               type="submit"
-              className="tweetBox__tweetButton"
+              className="postbox__postButton"
             >
               Post
             </Button>

@@ -58,6 +58,7 @@
 
 .nav__button:hover {
   cursor: pointer;
+  color: #28affd;
 }
 .nav__dropDown {
   display: flex;

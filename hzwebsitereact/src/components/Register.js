@@ -115,10 +115,7 @@ function Register() {
             type="password"
           ></input>
         </form>
-        {/* <p>
-                By signing-in you agree to the <strong>SocialX</strong> conditions of Use & Sale.
-                Please see our Privacy Notice,our Cookies Notice and our Interest-Based Ads Notice.
-            </p> */}
+
         <button onClick={register} className="login__registerButton">
           Create account
         </button>
