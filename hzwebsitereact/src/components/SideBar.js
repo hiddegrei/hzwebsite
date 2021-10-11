@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/SideBar.css";
 import { useStateValue } from "../Stateprovider";
+import { auth } from "../firebase";
 
 function SideBar() {
   const [{ user, profile }, dispatch] = useStateValue();
@@ -52,7 +53,9 @@ function SideBar() {
         {user ? (
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div className="sidebar__welcome">Hi {profile.username}</div>
-            <a href="/login"> log out</a>
+            <a href="/login" onClick={() => auth.signOut()}>
+              log out
+            </a>
           </div>
         ) : (
           <a href="/login"> log in</a>

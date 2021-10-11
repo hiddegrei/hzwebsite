@@ -31,37 +31,25 @@ function Login() {
             type: "SET_USER",
             user: useruser,
           });
-          console.log(useruser);
-
-          if (useruser.src.uid) {
-            db.collection("users")
-              .where("userId", "==", useruser.src.uid)
-              .get()
-              .then((querySnapshot) => {
-                querySnapshot.forEach((doc) => {
-                  // console.log( doc.data());
-                  dispatch({
-                    type: "SET_PROFILE",
-                    profile: doc.data(),
-                  });
+          console.log(useruser.src.uid);
+          db.collection("users")
+            .where("userId", "==", useruser.src.uid)
+            .get()
+            .then((querySnapshot) => {
+              querySnapshot.forEach((doc) => {
+                console.log(doc.data());
+                dispatch({
+                  type: "SET_PROFILE",
+                  profile: doc.data(),
                 });
-              })
-              .catch((error) => console.log(error));
-          }
-          // dispatch({
-          //     type:'SET_HANDLE',
-          //     handle:username,
-          // })
-
-          // ...
+              });
+            })
+            .catch((error) => console.log(error));
         })
         .then((auth) => {
           history.push("/");
         })
-        .catch((error) => alert(error.message));
-      // }else{alert('wrong credentials')}
-
-      //})
+        .catch((error) => console.log(error));
     } else {
       alert("email/password is missing");
     }

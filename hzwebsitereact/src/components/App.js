@@ -42,7 +42,7 @@ function App() {
   }, [user]);
 
   useEffect(() => {
-    if (user) {
+    if (user !== null && user.uid != undefined) {
       db.collection("users")
         .where("userId", "==", user.uid)
         .get()

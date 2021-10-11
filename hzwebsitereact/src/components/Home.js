@@ -67,14 +67,14 @@ function Home() {
           ></img>
         </a>
       </div>
-      <p className="home__p">
+      <div className="home__p">
         Op de opleiding ICT op de hz onderscheiden we 3 stromingen
         <ul>
           <li>Business IT Consultant</li>
           <li>Data Scientist</li>
           <li>Software Engineer</li>
         </ul>
-      </p>
+      </div>
 
       <p className="home__p">
         Omdat ik nog maar vrij recent begonnnen ben met programmeren en ik nog
@@ -87,7 +87,7 @@ function Home() {
         misschien anders over.
       </p>
 
-      <p className="home__p">
+      <div className="home__p">
         <h2 style={{ display: "flex" }}>Projecten</h2>
         <div style={{ display: "flex" }}>
           <a target="_blank" href="https://socialhit.nl">
@@ -98,7 +98,7 @@ function Home() {
             ></img>
           </a>
         </div>
-      </p>
+      </div>
     </div>
   );
 }
